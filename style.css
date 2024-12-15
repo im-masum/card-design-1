@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    width: 100%;
+    padding: 2em;
+}
+.container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    line-height: 1.5em;
+}
+
+.item {
+
+    --color: #f47515;
+    height: 500px;
+    background-color: var(--color);
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-shadow: #e2e3e44d 0 1px 2px 0px,
+    #1f1f2026 0px 1px 3px 1px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 2;
+    height: 80%;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color);
+    border-width: 40px 40px 40px 40px;
+    filter: drop-shadow(5px 0 4px #ddcdcd00);
+    transition: filter .5s;
+}
+
+.item:nth-child(1) {
+    --color: #04484b;
+}
+
+.item:nth-child(2) {
+    --color: #123959;
+}
+
+.item:nth-child(3) {
+    --color: #746103;
+}
+
+.layer {
+    height: 400px;
+    background-color: rgb(206, 214, 222);
+    border: 1px solid #fff;
+    border-radius: inherit;
+    padding: 20px;
+    box-shadow: 10px 10px 10px .5px ,
+    -10px -10px -10px  -5px inset;   
+    position: relative;
+    left: 10px;
+    transition: left 1s;
+}
+
+h3 {
+    font-weight: 700;
+    text-align: center;
+    color: var(--color);
+}
+
+h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+p {
+    color: #3c3434;
+}
+
+span {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: var(--color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        #7c7272 0px 1px 2px,
+        #675d5d 0px 2px 4px,
+        #5e5656 0px 4px 8px,
+        #645c5c 0px 8px 16px,
+        #595555 0px 16px 32px,
+        #6c6868 0px 32px 64px;
+    font-size: 16px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;    
+}
+.item:hover:after{
+    filter: drop-shadow(5px 0 4px
+    #f8f6f6);
+}
+.item:hover .layer{
+    left: 5cqw;
+}

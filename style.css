@@ -8,6 +8,7 @@
 body{
     width: 100%;
     padding: 2em;
+    background-color: #222323;
 }
 .container {
     display: flex;
@@ -17,8 +18,8 @@ body{
 }
 
 .item {
-
-    --color: #f47515;
+    display: flex;
+    flex-direction: column;
     height: 500px;
     background-color: var(--color);
     border-radius: 10px;
@@ -26,6 +27,7 @@ body{
     box-shadow: #e2e3e44d 0 1px 2px 0px,
     #1f1f2026 0px 1px 3px 1px;
     position: relative;
+    align-items: center;
     cursor: pointer;
     
 }
@@ -41,7 +43,7 @@ body{
     border-color: transparent transparent transparent var(--color);
     border-width: 40px 40px 40px 40px;
     filter: drop-shadow(5px 0 4px #ddcdcd00);
-    transition: filter .5s;
+    transition: filter .4s;
 }
 
 .item:nth-child(1) {
@@ -57,13 +59,13 @@ body{
 }
 
 .layer {
-    height: 400px;
+    height: 400px; 
     background-color: rgb(206, 214, 222);
     border: 1px solid #fff;
     border-radius: inherit;
     padding: 20px;
     box-shadow: 10px 10px 10px .5px ,
-    -10px -10px -10px  -5px inset;   
+    -10px -10px -10px  -.5px;   
     position: relative;
     left: 10px;
     transition: left 1s;
@@ -112,5 +114,5 @@ span {
     #f8f6f6);
 }
 .item:hover .layer{
-    left: 5cqw;
+    left: 45px;
 }
